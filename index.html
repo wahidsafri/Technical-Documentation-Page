@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    @media (max-width: 768px) {
+    .main-doc {
+      margin-left: 0rem;
+      padding: 0rem 1rem;
+    }
+    }
+    </style>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation Page</title>
+  </head>
+  <body>
+      <nav id="navbar" class="navbar">
+        <header class="title"><h1 >CSS Layouting</h1></header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Display">Display</a></li>
+          <li><a class="nav-link" href="#Dimension">Dimension</a></li>
+          <li><a class="nav-link" href="#Box_Model">Box Model</a></li>
+          <li><a class="nav-link" href="#Margin">Margin</a></li>
+          <li><a class="nav-link" href="#Padding">Padding</a></li>
+          <li><a class="nav-link" href="#Border">Border</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+      </nav>
+    <main id="main-doc" class="main-doc">
+        <section class="main-section" id="Introduction">
+          <header><h2>Introduction</h2></header>
+          <hr />
+          <article>
+            <p>CSS is the language we use to style a Web page.</p>
+            <br>
+            <p>Website is often divided into headers, menus, content and a footer. CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Display">
+          <header><h2>Display</h2></header>
+          <hr />
+          <article>
+            <p>The display property is the most important CSS property for controlling layout.</p>
+            <p>Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.</p>
+            <h3>The Display Property</h3>
+            <p>The display property specifies if/how an element is displayed. Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.</p>
+            <h3>Block-level Elements</h3>
+            <p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+            <ul>
+              Examples of block-level elements:
+              <li>< div ></div></li>
+              <li>< h1 > - < h6 ></li>
+              <li>< p ></li>
+              <li>< form ></li>
+              <li>< header ></li>
+              <li>< footer ></li>
+              <li>< section ></li>
+            </ul>
+            <br>
+            <div id="example">
+              Example
+              <code>< p > The element with block-level element will be like this < /p ></code>
+              Result
+              <code ><p id="block-level">The element with block-level element will be like this</p></code>
+            </div>
+            <h3>Inline Elements</h3>
+            <p>An inline element does not start on a new line and only takes up as much width as necessary.</p>
+            <ul>
+              Examples of inline elements:
+              <li>< span ></li>
+              <li>< a ></li>
+              <li>< i m g ></li>
+            </ul>
+            <br>
+            <div id="example">
+              Example
+              <code> < p > The element with < span > inline element < /span > will be like this < /p ></code>
+              Result
+              <code id="inline">The element with <span>inline element</span> will be like this</code>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="Dimension">
+          <header><h2>Dimension</h2></header>
+          <hr />
+          <article>
+            <p>Dimension in CSS is used to adjust the height or width of an element</p>
+            <h3>CSS Height and Width</h3>
+            <p>The CSS height and width properties are used to set the height and width of an element. <br> The CSS max-width property is used to set the maximum width of an element.</p>
+            <h3>CSS Setting height and width</h3>
+            <p>The height and width properties are used to set the height and width of an element. <br> The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.</p>
+            <h3>CSS height and width Values</h3>
+            <p>The height and width properties may have the following values:</p>
+            <ul>
+              <li>auto - This is default. The browser calculates the height and width</li>
+              <li>length - Defines the height/width in px, cm etc.</li>
+              <li>% - Defines the height/width in percent of the containing block</li>
+              <li>initial - Sets the height/width to its default value</li>
+              <li>inherit - The height/width will be inherited from its parent value</li>
+            </ul>
+            <h3>CSS height and width Examples</h3>
+            <p>This element has a height of 200 pixels and a width of 50%</p>
+            <br>
+            <div id="example">
+              Example
+              <code>< p > This element has a height of 200 pixels and a width of 50% < /p ></code>
+              Result
+              <code ><p id="css-dimension">This element has a height of 200 pixels and a width of 50%</p></code>
+            </div>
+          </article>
+        </section>
+        <section class="main-section" id="Box_Model">
+          <header><h2>Box Model</h2></header>
+          <hr />
+          <article><p>All HTML elements can be considered as boxes.</p>
+            <h3>The CSS Box Model</h3>
+            <p>In CSS, the term "box model" is used when talking about design and layout. <br>
+              The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:</p>
+              <div id="css-margin">Margin
+              <div id="css-border">Border
+                <div id="css-padding">Padding
+                  <div id="css-content">Content</div>
+                </div>
+              </div>
+            </div>
+            <ul>Explanation of the different parts:
+              <li>Content - The content of the box, where text and images appear</li>
+              <li>Padding - Clears an area around the content. The padding is transparent</li>
+              <li>Border - A border that goes around the padding and content</li>
+              <li>Margin - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Margin">
+          <header><h2>Margin</h2></header>
+          <hr />
+          <article>
+            <p>Margins are used to create space around elements, outside of any defined borders.
+              <br>
+              The CSS margin properties are used to create space around elements, outside of any defined borders.
+              <br>
+              With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
+            </p>
+            <h3>Margin - Individual Sides</h3>
+              <ul>CSS has properties for specifying the margin for each side of an element:
+                <li>margin-top</li>
+                <li>margin-right</li>
+                <li>margin-bottom</li>
+                <li>margin-left</li>
+              </ul>
+              <ul>All the margin properties can have the following values:
+                <li>auto - the browser calculates the margin</li>
+                <li>length - specifies a margin in px, pt, cm, etc.</li>
+                <li>% - specifies a margin in % of the width of the containing element</li>
+                <li>inherit - specifies that the margin should be inherited from the parent element</li>
+              </ul>
+              <h3>Margin - Shorthand Property</h3>
+              <p>To shorten the code, it is possible to specify all the margin properties in one property.</p>
+              <ul>The margin property is a shorthand property for the following individual margin properties:
+                <li>margin-top</li>
+                <li>margin-bottom</li>
+                <li>margin-left</li>
+                <li>margin-rigt</li>
+              </ul>
+              <p>So, here is how it works:</p>
+              <br>
+              <ul style="font-weight: bold;">If the margin property has four values: <br> margin: 25px 50px 75px 100px;</ul>
+                <li>top margin is 25px</li>
+                <li>right margin is 50px</li>
+                <li>bottom margin is 75px</li>
+                <li>left margin is 100px</li>
+          </article>
+        </section>
+        <section class="main-section" id="Padding">
+          <header><h2>Padding</h2></header>
+          <hr />
+          <article>
+            <p>Padding is used to create space around an element's content, inside of any defined borders. 
+            <br>
+            The CSS padding properties are used to generate space around an element's content, inside of any defined borders. <br>
+            With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+            <h3>Padding - Individual Sides</h3>
+            <ul>CSS has properties for specifying the padding for each side of an element:
+              <li>padding-top</li>
+              <li>padding-right</li>
+              <li>padding-bottom</li>
+              <li>padding-left</li>
+            </ul>
+            <ul>All the padding properties can have the following values:
+                <li>auto - the browser calculates the padding</li>
+                <li>length - specifies a padding in px, pt, cm, etc.</li>
+                <li>% - specifies a padding in % of the width of the containing element</li>
+                <li>inherit - specifies that the padding should be inherited from the parent element</li>
+              </ul>
+              <h3>Padding - Shorthand Property</h3>
+              <p>To shorten the code, it is possible to specify all the padding properties in one property.</p>
+              <ul>The padding property is a shorthand property for the following individual padding properties:
+                <li>padding-top</li>
+                <li>padding-bottom</li>
+                <li>padding-left</li>
+                <li>padding-rigt</li>
+              </ul>
+              <br>
+              <p>So, here is how it works:</p>
+              <br>
+              <ul style="font-weight: bold;">If the padding property has four values: <br> padding: 25px 50px 75px 100px;</ul>
+                <li>top padding is 25px</li>
+                <li>right padding is 50px</li>
+                <li>bottom padding is 75px</li>
+                <li>left padding is 100px</li>
+          </article>
+        </section>
+        <section class="main-section" id="Border">
+          <header><h2>Border</h2></header>
+          <hr />
+          <article><p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+          <h3>Border Style</h3>
+          <p>The border-style property specifies what kind of border to display.</p>
+          <ul>The following values are allowed:
+            <li>dotted - Defines a dotted border</li>
+            <li>dashed - Defines a dashed border</li>
+            <li>solid - Defines a solid border</li>
+            <li>double - Defines a double border</li>
+            <li>groove - Defines a 3D grooved border. The effect depends on the border-color value</li>
+            <li>ridge - Defines a 3D ridged border. The effect depends on the border-color value</li>
+            <li>inset - Defines a 3D inset border. The effect depends on the border-color value</li>
+            <li>outset - Defines a 3D outset border. The effect depends on the border-color value</li>
+            <li>none - Defines no border</li>
+            <li>hidden - Defines a hidden border</li>
+            <br>
+            The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
+          </ul>
+          <div id="example">
+            Example
+            <code>border: red dotted 2px;<br>
+              border: red dashed 2px;<br>
+              border: red solid 2px;<br>
+              border: red double 2px;<br>
+              border: red groove 2px;<br>
+              border: red ridge 2px;<br>
+              border: red inset 2px;<br>
+              border: red outset 2px;<br>
+              border: red none 2px;<br>
+              border: red hidden 2px;<br>
+            </code>
+            Result
+            <code >
+              <p id="css-dotted-border">This is border with dotted style</p>
+              <br>
+              <p id="css-dashed-border">This is border with dashed style</p>
+              <br>
+              <p id="css-solid-border">This is border with solid style</p>
+              <br>
+              <p id="css-double-border">This is border with double style</p>
+              <br>
+              <p id="css-groove-border">This is border with dotted style</p>
+              <br>
+              <p id="css-ridge-border">This is border with ridge style</p>
+              <br>
+              <p id="css-inset-border">This is border with inset style</p>
+              <br>
+              <p id="css-outset-border">This is border with outset style</p>
+              <br>
+              <p id="css-none-border">This is border with outset style</p>
+              <br>
+              <p id="css-hidden-border">This is border with hidden style</p>
+            </code>
+          </div>
+          </article>
+        </section>
+        <section class="main-section" id="Reference">
+          <header><h2>Reference</h2></header>
+          <hr >
+          <p>All documentation on this site is taken from <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a></p>
+          <article>
+            <p></p>
+          </article>
+        </section>
+      </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
